@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="id_multiPlayer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <SplitPane dividerPositions="0.992462311557789" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="537.0" prefWidth="598.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="573.0" layoutX="14.0" layoutY="-101.0" stroke="BLACK" strokeType="INSIDE" width="463.0" />
+                  <Label layoutX="110.0" layoutY="91.0" text="multi player" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="43.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="107.0" layoutY="238.0" prefHeight="65.0" prefWidth="0.0" text="o" textFill="#00ff42">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="110.0" layoutY="179.0" prefHeight="65.0" prefWidth="0.0" text="x" textFill="RED">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="id_play" layoutX="266.0" layoutY="384.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="73.0" text="Play">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <effect>
+                        <Lighting diffuseConstant="1.69">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#0080ff" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Button>
+                  <Button fx:id="id_back" layoutX="139.0" layoutY="383.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="73.0" text="Back">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                     <effect>
+                        <Lighting diffuseConstant="1.69">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#0080ff" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Button>
+                  <TextField fx:id="id_player1" layoutX="165.0" layoutY="199.0" prefHeight="33.0" prefWidth="173.0" promptText=" player name 1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="id_player2" layoutX="165.0" layoutY="254.0" prefHeight="33.0" prefWidth="173.0" promptText="player name 2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+                  <CheckBox fx:id="id_record" layoutX="264.0" layoutY="328.0" mnemonicParsing="false" />
+                  <Label layoutX="205.0" layoutY="323.0" text="Record" textFill="RED">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+        </items>
+      </SplitPane>
+   </center>
+   <effect>
+      <InnerShadow choke="0.64" color="#008cff" height="100.07" radius="74.43" width="199.65" />
+   </effect>
+</BorderPane>

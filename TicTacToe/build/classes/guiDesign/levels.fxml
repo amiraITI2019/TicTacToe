@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="id_level" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="479.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <SplitPane dividerPositions="0.992462311557789" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="537.0" prefWidth="598.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="573.0" layoutX="14.0" layoutY="-101.0" stroke="BLACK" strokeType="INSIDE" width="463.0" />
+                  <Label layoutX="110.0" layoutY="91.0" text="Choose Level" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="43.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="id_easy" layoutX="154.0" layoutY="175.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="169.0" text="Easy">
+                     <font>
+                        <Font name="System Italic" size="23.0" />
+                     </font>
+                     <effect>
+                        <Lighting diffuseConstant="1.71">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#0095ff" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Button>
+                  <Button fx:id="id_medium" layoutX="154.0" layoutY="238.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="169.0" text="Medium">
+                     <font>
+                        <Font name="System Italic" size="23.0" />
+                     </font>
+                     <effect>
+                        <Lighting diffuseConstant="1.71">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#0095ff" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Button>
+                  <Button fx:id="id_hard" layoutX="154.0" layoutY="305.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="169.0" text="Hard">
+                     <font>
+                        <Font name="System Italic" size="23.0" />
+                     </font>
+                     <effect>
+                        <Lighting diffuseConstant="1.74">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant color="#0095ff" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Button>
+                  <Button fx:id="id_back" layoutX="195.0" layoutY="380.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="90.0" text="Back">
+                     <font>
+                        <Font name="System Bold Italic" size="22.0" />
+                     </font>
+                     <effect>
+                        <Lighting diffuseConstant="2.0" specularConstant="0.0" specularExponent="40.0" surfaceScale="10.0">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+        </items>
+      </SplitPane>
+   </center>
+   <effect>
+      <InnerShadow choke="0.64" color="#008cff" height="100.07" radius="74.43" width="199.65" />
+   </effect>
+</BorderPane>
