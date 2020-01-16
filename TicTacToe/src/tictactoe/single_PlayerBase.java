@@ -218,7 +218,7 @@ public class single_PlayerBase extends BorderPane {
         });
         selectX.setOnAction((event) -> {
             selectedXO = 'X';
-            selectX.setSelected(false);
+            selectO.setSelected(false);
             
         });
         selectO.setOnAction((event) -> {
