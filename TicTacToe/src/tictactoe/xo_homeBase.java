@@ -218,6 +218,11 @@ public class xo_homeBase extends BorderPane {
             Scene scene = new Scene(root);
             s.setScene(scene);
         });
+        id_playOnline.setOnAction((Action) -> {
+            Parent root = new loginOrRegBase(s);
+            Scene scene = new Scene(root);
+            s.setScene(scene);
+        });
 
     }
 }

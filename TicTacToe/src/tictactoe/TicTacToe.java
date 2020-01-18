@@ -21,6 +21,7 @@ public class TicTacToe extends Application {
     public void start(Stage stage) throws Exception {
 
         Parent root = new xo_homeBase(stage);
+//       Parent root=new recordsBase(stage);
         Scene scene = new Scene(root);
         stage.setResizable(false);
         stage.setScene(scene);

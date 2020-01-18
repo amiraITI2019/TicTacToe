@@ -1,5 +1,8 @@
 package tictactoe;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
@@ -242,9 +245,18 @@ public class single_PlayerBase extends BorderPane {
                 if (checked) {
                     player.match = "match1";
                 }
+                else{
+                     player.match = "";
+                
+                }
 
                 //Parent root = new levelsBase(stage, player);
-                Parent root = new playComputerDesign(stage, player);
+                Parent root = null;
+                try {
+                    root = new playComputerDesign(stage, player);
+                } catch (IOException ex) {
+                    Logger.getLogger(single_PlayerBase.class.getName()).log(Level.SEVERE, null, ex);
+                }
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
             } else {

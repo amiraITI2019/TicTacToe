@@ -123,34 +123,36 @@ public class playMultiDesignBase extends BorderPane {
         rectangle.setStrokeType(javafx.scene.shape.StrokeType.INSIDE);
         rectangle.setWidth(487.0);
 
-        id_playerNameFirst.setLayoutX(85.0);
-        id_playerNameFirst.setLayoutY(97.0);
+        id_playerNameFirst.setLayoutX(98.0);
+        id_playerNameFirst.setLayoutY(103.0);
         id_playerNameFirst.setPrefHeight(25.0);
-        id_playerNameFirst.setPrefWidth(65.0);
+        id_playerNameFirst.setPrefWidth(82.0);
         id_playerNameFirst.setText(player.name);
         id_playerNameFirst.setTextFill(javafx.scene.paint.Color.valueOf("#06afe2"));
         id_playerNameFirst.setFont(new Font(16.0));
 
-        id_playerNameSecond.setLayoutX(305.0);
-        id_playerNameSecond.setLayoutY(97.0);
+        id_playerNameSecond.setLayoutX(316.0);
+        id_playerNameSecond.setLayoutY(103.0);
+        id_playerNameFirst.setPrefHeight(25.0);
+        id_playerNameFirst.setPrefWidth(128.0);
         id_playerNameSecond.setText(sPlayer.name);
         id_playerNameSecond.setTextFill(javafx.scene.paint.Color.valueOf("#06afe2"));
         id_playerNameSecond.setFont(new Font(16.0));
 
-        id_playerScoreFirst.setLayoutX(108.0);
-        id_playerScoreFirst.setLayoutY(118.0);
+        id_playerScoreFirst.setLayoutX(187.0);
+        id_playerScoreFirst.setLayoutY(114.0);
         id_playerScoreFirst.setText("0");
         id_playerScoreFirst.setTextFill(javafx.scene.paint.Color.WHITE);
         id_playerScoreFirst.setFont(new Font(17.0));
 
-        id_playerScoreSecond.setLayoutX(325.0);
-        id_playerScoreSecond.setLayoutY(120.0);
+        id_playerScoreSecond.setLayoutX(284.0);
+        id_playerScoreSecond.setLayoutY(114.0);
         id_playerScoreSecond.setText("0");
         id_playerScoreSecond.setTextFill(javafx.scene.paint.Color.WHITE);
         id_playerScoreSecond.setFont(new Font(17.0));
 
-        id_newGame.setLayoutX(242.0);
-        id_newGame.setLayoutY(417.0);
+        id_newGame.setLayoutX(255.0);
+        id_newGame.setLayoutY(401.0);
         id_newGame.setMnemonicParsing(false);
         id_newGame.setPrefHeight(34.0);
         id_newGame.setPrefWidth(91.0);
@@ -160,19 +162,19 @@ public class playMultiDesignBase extends BorderPane {
         id_newGame.setEffect(lighting);
         id_newGame.setFont(new Font(14.0));
 
-        label.setLayoutX(152.0);
+        label.setLayoutX(132.0);
         label.setLayoutY(37.0);
         label.setText("x");
         label.setTextFill(javafx.scene.paint.Color.RED);
         label.setFont(new Font(50.0));
 
-        label0.setLayoutX(176.0);
+        label0.setLayoutX(156.0);
         label0.setLayoutY(37.0);
         label0.setText("o");
         label0.setTextFill(javafx.scene.paint.Color.valueOf("#00ff16"));
         label0.setFont(new Font(50.0));
 
-        label1.setLayoutX(212.0);
+        label1.setLayoutX(192.0);
         label1.setLayoutY(41.0);
         label1.setText("Game");
         label1.setTextFill(javafx.scene.paint.Color.valueOf("#0090f0"));
@@ -181,74 +183,74 @@ public class playMultiDesignBase extends BorderPane {
         dropShadow.setColor(javafx.scene.paint.Color.valueOf("#00a9d8"));
         label1.setEffect(dropShadow);
 
-        id_btn1.setLayoutX(92.0);
-        id_btn1.setLayoutY(151.0);
+        id_btn1.setLayoutX(98.0);
+        id_btn1.setLayoutY(147.0);
         id_btn1.setMnemonicParsing(false);
-        id_btn1.setPrefHeight(59.0);
-        id_btn1.setPrefWidth(78.0);
+        id_btn1.setPrefHeight(71.0);
+        id_btn1.setPrefWidth(84.0);
         id_btn1.setFont(new Font(35.0));
 
-        id_btn2.setLayoutX(185.0);
-        id_btn2.setLayoutY(151.0);
+        id_btn2.setLayoutX(199.0);
+        id_btn2.setLayoutY(147.0);
         id_btn2.setMnemonicParsing(false);
-        id_btn2.setPrefHeight(59.0);
-        id_btn2.setPrefWidth(78.0);
+        id_btn2.setPrefHeight(71.0);
+        id_btn2.setPrefWidth(84.0);
         id_btn2.setFont(new Font(35.0));
 
-        id_btn3.setLayoutX(279.0);
-        id_btn3.setLayoutY(151.0);
+        id_btn3.setLayoutX(300.0);
+        id_btn3.setLayoutY(147.0);
         id_btn3.setMnemonicParsing(false);
-        id_btn3.setPrefHeight(59.0);
-        id_btn3.setPrefWidth(78.0);
+        id_btn3.setPrefHeight(71.0);
+        id_btn3.setPrefWidth(84.0);
         id_btn3.setFont(new Font(35.0));
 
-        id_btn6.setLayoutX(279.0);
-        id_btn6.setLayoutY(239.0);
+        id_btn6.setLayoutX(301.0);
+        id_btn6.setLayoutY(232.0);
         id_btn6.setMnemonicParsing(false);
-        id_btn6.setPrefHeight(59.0);
-        id_btn6.setPrefWidth(78.0);
+        id_btn6.setPrefHeight(71.0);
+        id_btn6.setPrefWidth(84.0);
         id_btn6.setFont(new Font(35.0));
 
-        id_btn4.setLayoutX(93.0);
-        id_btn4.setLayoutY(238.0);
+        id_btn4.setLayoutX(97.0);
+        id_btn4.setLayoutY(232.0);
         id_btn4.setMnemonicParsing(false);
-        id_btn4.setPrefHeight(59.0);
-        id_btn4.setPrefWidth(78.0);
+        id_btn4.setPrefHeight(71.0);
+        id_btn4.setPrefWidth(84.0);
         id_btn4.setFont(new Font(35.0));
 
-        id_btn5.setLayoutX(185.0);
-        id_btn5.setLayoutY(239.0);
+        id_btn5.setLayoutX(199.0);
+        id_btn5.setLayoutY(232.0);
         id_btn5.setMnemonicParsing(false);
-        id_btn5.setPrefHeight(59.0);
-        id_btn5.setPrefWidth(78.0);
+        id_btn5.setPrefHeight(71.0);
+        id_btn5.setPrefWidth(84.0);
         id_btn5.setFont(new Font(35.0));
 
-        id_btn9.setLayoutX(279.0);
-        id_btn9.setLayoutY(325.0);
+        id_btn9.setLayoutX(301.0);
+        id_btn9.setLayoutY(318.0);
         id_btn9.setMnemonicParsing(false);
-        id_btn9.setPrefHeight(59.0);
-        id_btn9.setPrefWidth(78.0);
+        id_btn9.setPrefHeight(71.0);
+        id_btn9.setPrefWidth(84.0);
         id_btn9.setFont(new Font(35.0));
 
-        id_btn8.setLayoutX(185.0);
-        id_btn8.setLayoutY(325.0);
+        id_btn8.setLayoutX(199.0);
+        id_btn8.setLayoutY(317.0);
         id_btn8.setMnemonicParsing(false);
-        id_btn8.setPrefHeight(59.0);
-        id_btn8.setPrefWidth(78.0);
+        id_btn8.setPrefHeight(71.0);
+        id_btn8.setPrefWidth(84.0);
         id_btn8.setFont(new Font(35.0));
 
-        id_btn7.setLayoutX(92.0);
-        id_btn7.setLayoutY(325.0);
+        id_btn7.setLayoutX(97.0);
+        id_btn7.setLayoutY(317.0);
         id_btn7.setMnemonicParsing(false);
-        id_btn7.setPrefHeight(59.0);
-        id_btn7.setPrefWidth(78.0);
+        id_btn7.setPrefHeight(71.0);
+        id_btn7.setPrefWidth(84.0);
         id_btn7.setFont(new Font(35.0));
 
-        id_back.setLayoutX(116.0);
-        id_back.setLayoutY(417.0);
+        id_back.setLayoutX(140.0);
+        id_back.setLayoutY(401.0);
         id_back.setMnemonicParsing(false);
         id_back.setPrefHeight(34.0);
-        id_back.setPrefWidth(92.0);
+        id_back.setPrefWidth(91.0);
         id_back.setText("back");
         id_back.setStyle("-fx-background-color: #008cff;");
         id_newGame.setStyle("-fx-background-color: #008cff;");
@@ -310,7 +312,6 @@ public class playMultiDesignBase extends BorderPane {
                                 player1();
                             }
                         }
-
                     } else {
                         if ("".equals(id_btn1.getText())) {
                             result = checkSuccess(success1);
@@ -329,6 +330,7 @@ public class playMultiDesignBase extends BorderPane {
                             }
                         }
                     }
+                    draw();
 
                     setCurrentPlayer(id_btn1);
                     firstPlayed = !firstPlayed;
@@ -352,7 +354,6 @@ public class playMultiDesignBase extends BorderPane {
                                 player1();
                             }
                         }
-
                     } else {
                         if ("".equals(id_btn2.getText())) {
                             result = checkSuccess(success1);
@@ -371,6 +372,7 @@ public class playMultiDesignBase extends BorderPane {
                             }
                         }
                     }
+                    draw();
                     setCurrentPlayer(id_btn2);
                     firstPlayed = !firstPlayed;
                     setCurrentPlayer(id_btn2);
@@ -393,7 +395,6 @@ public class playMultiDesignBase extends BorderPane {
                                 player1();
                             }
                         }
-
                     } else {
                         if ("".equals(id_btn3.getText())) {
                             result = checkSuccess(success1);
@@ -412,6 +413,7 @@ public class playMultiDesignBase extends BorderPane {
                             }
                         }
                     }
+                    draw();
 
                     setCurrentPlayer(id_btn3);
                     firstPlayed = !firstPlayed;
@@ -435,7 +437,6 @@ public class playMultiDesignBase extends BorderPane {
                                 player1();
                             }
                         }
-
                     } else {
                         if ("".equals(id_btn4.getText())) {
                             result = checkSuccess(success1);
@@ -454,6 +455,7 @@ public class playMultiDesignBase extends BorderPane {
                             }
                         }
                     }
+                    draw();
 
                     setCurrentPlayer(id_btn4);
                     firstPlayed = !firstPlayed;
@@ -478,7 +480,6 @@ public class playMultiDesignBase extends BorderPane {
                                 player1();
                             }
                         }
-
                     } else {
                         if ("".equals(id_btn5.getText())) {
                             result = checkSuccess(success1);
@@ -497,6 +498,7 @@ public class playMultiDesignBase extends BorderPane {
                             }
                         }
                     }
+                    draw();
 
                     setCurrentPlayer(id_btn5);
                     firstPlayed = !firstPlayed;
@@ -521,7 +523,6 @@ public class playMultiDesignBase extends BorderPane {
                                 player1();
                             }
                         }
-
                     } else {
                         if ("".equals(id_btn6.getText())) {
                             result = checkSuccess(success1);
@@ -540,6 +541,7 @@ public class playMultiDesignBase extends BorderPane {
                             }
                         }
                     }
+                    draw();
 
                     setCurrentPlayer(id_btn6);
                     firstPlayed = !firstPlayed;
@@ -564,7 +566,6 @@ public class playMultiDesignBase extends BorderPane {
                                 player1();
                             }
                         }
-
                     } else {
                         if ("".equals(id_btn7.getText())) {
                             result = checkSuccess(success1);
@@ -581,8 +582,10 @@ public class playMultiDesignBase extends BorderPane {
                                     }
                                 }
                             }
+      
                         }
                     }
+                    draw();
 
                     setCurrentPlayer(id_btn7);
                     firstPlayed = !firstPlayed;
@@ -623,9 +626,10 @@ public class playMultiDesignBase extends BorderPane {
                                     }
                                 }
                             }
+          
                         }
                     }
-
+                    draw();
                     setCurrentPlayer(id_btn8);
                     firstPlayed = !firstPlayed;
                     setCurrentPlayer(id_btn8);
@@ -649,11 +653,11 @@ public class playMultiDesignBase extends BorderPane {
                                 player1();
                             }
                         }
+
                     } else {
                         if ("".equals(id_btn9.getText())) {
                             result = checkSuccess(success1);
                             if (!result) {
-
                                 id_btn9.setTextFill(oForeground);
                                 id_btn9.setText("O");
                                 player2++;
@@ -665,9 +669,11 @@ public class playMultiDesignBase extends BorderPane {
                                         player2();
                                     }
                                 }
+                                
                             }
                         }
                     }
+                    draw();
                     setCurrentPlayer(id_btn9);
                     firstPlayed = !firstPlayed;
                     setCurrentPlayer(id_btn9);
@@ -785,6 +791,7 @@ public class playMultiDesignBase extends BorderPane {
             gamePlayed = false;
             firstPlayed = false;
             XOCounter = 0;
+            
         }
 
         return false;
@@ -802,5 +809,12 @@ public class playMultiDesignBase extends BorderPane {
         id_playerScoreSecond.setText("" + Player2Score);
         id_playerScoreFirst.setText("" + Player1Score);
         JOptionPane.showMessageDialog(null, "Congratulations    " + id_playerNameSecond.getText());
+    }
+    public void draw(){
+        XOCounter++;
+        if(XOCounter==9)
+        {
+            JOptionPane.showMessageDialog(null, "    NO Winner ^_^");
+        }
     }
 }

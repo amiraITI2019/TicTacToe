@@ -1,5 +1,8 @@
 package tictactoe;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -158,21 +161,36 @@ public  class levelsBase extends BorderPane {
          
           id_easy.setOnAction((Action) -> {
 //            AppManager.viewPane(AppManager.playComputerDesign);
-              Parent root = new playComputerDesign(stage,player);
+              Parent root = null;
+            try {
+                root = new playComputerDesign(stage,player);
+            } catch (IOException ex) {
+                Logger.getLogger(levelsBase.class.getName()).log(Level.SEVERE, null, ex);
+            }
               Scene scene = new Scene(root);
               stage.setScene(scene);
         });
           
            id_medium.setOnAction((Action) -> {
 //            AppManager.viewPane(AppManager.playComputerDesign);
-              Parent root = new playComputerDesign(stage,player);
+              Parent root = null;
+            try {
+                root = new playComputerDesign(stage,player);
+            } catch (IOException ex) {
+                Logger.getLogger(levelsBase.class.getName()).log(Level.SEVERE, null, ex);
+            }
               Scene scene = new Scene(root);
               stage.setScene(scene);
         });
            
             id_hard.setOnAction((Action) -> {
 //            AppManager.viewPane(AppManager.playComputerDesign);
-              Parent root = new playComputerDesign(stage,player);
+              Parent root = null;
+            try {
+                root = new playComputerDesign(stage,player);
+            } catch (IOException ex) {
+                Logger.getLogger(levelsBase.class.getName()).log(Level.SEVERE, null, ex);
+            }
               Scene scene = new Scene(root);
               stage.setScene(scene);
         });

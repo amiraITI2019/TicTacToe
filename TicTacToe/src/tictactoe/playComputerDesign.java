@@ -1,6 +1,12 @@
 package tictactoe;
 
-import Database.Database;
+import Database.DatabaseOff;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -28,6 +34,10 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.concurrent.Task;
 import javafx.concurrent.WorkerStateEvent;
+import javafx.geometry.Pos;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Dialog;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
 
 public class playComputerDesign extends BorderPane {
@@ -71,8 +81,10 @@ public class playComputerDesign extends BorderPane {
     protected Button b;
     protected String selectedXOPlayer = "X";
     protected String selectedXOComputer = "O";
+    File f;
+    FileWriter fw;
 
-    public playComputerDesign(Stage s, Player p) {
+    public playComputerDesign(Stage s, Player p) throws IOException {
 
         this.stage = s;
         player = p;
@@ -120,6 +132,15 @@ public class playComputerDesign extends BorderPane {
         btn7 = id_btn7;
         btn8 = id_btn8;
         btn9 = id_btn9;
+        btn1.setId("btn1");
+        btn2.setId("btn2");
+        btn3.setId("btn3");
+        btn4.setId("btn4");
+        btn5.setId("btn5");
+        btn6.setId("btn6");
+        btn7.setId("btn7");
+        btn8.setId("btn8");
+        btn9.setId("btn9");
 
         btn1.setFocusTraversable(false);
         btn2.setFocusTraversable(false);
@@ -350,7 +371,7 @@ public class playComputerDesign extends BorderPane {
 
         }
         try {
-            Database db = new Database();
+            DatabaseOff db = new DatabaseOff();
             db.addPlayer(player);
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -359,10 +380,14 @@ public class playComputerDesign extends BorderPane {
         id_back.setOnAction((Action) -> {
             userScore = 0;
             computerScore = 0;
-//            Parent root = new levelsBase(stage, player);
             Parent root = new single_PlayerBase(stage);
             Scene scene = new Scene(root);
             stage.setScene(scene);
+            try {
+                fw.close();
+            } catch (IOException ex) {
+                Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
         });
 
@@ -374,11 +399,18 @@ public class playComputerDesign extends BorderPane {
             public void handle(ActionEvent event) {
                 if (flag) {
                     if ("".equals(btn1.getText())) {
-                        btn1.setText(selectedXOPlayer);
-                        playUser();
-                        availableLocations.remove(btn1);
-                        if (!result) {
-                            playComputer();
+                        try {
+                            btn1.setText(selectedXOPlayer);
+                            fw.write("player btn1 " + selectedXOPlayer);
+                            fw.write(System.getProperty("line.separator"));
+
+                            playUser();
+                            availableLocations.remove(btn1);
+                            if (!result) {
+                                playComputer();
+                            }
+                        } catch (IOException ex) {
+                            Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
                         }
                     }
                 }
@@ -390,6 +422,14 @@ public class playComputerDesign extends BorderPane {
                 if (flag) {
                     if ("".equals(btn2.getText())) {
                         btn2.setText(selectedXOPlayer);
+                        try {
+                            fw.write("player btn2 " + selectedXOPlayer);
+                            fw.write(System.getProperty("line.separator"));
+
+                        } catch (IOException ex) {
+                            Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+
                         playUser();
                         availableLocations.remove(btn2);
                         if (!result) {
@@ -406,6 +446,12 @@ public class playComputerDesign extends BorderPane {
                 if (flag) {
                     if ("".equals(btn3.getText())) {
                         btn3.setText(selectedXOPlayer);
+                        try {
+                            fw.write("player btn3 " + selectedXOPlayer);
+                            fw.write(System.getProperty("line.separator"));
+                        } catch (IOException ex) {
+                            Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
+                        }
                         playUser();
                         availableLocations.remove(btn3);
                         if (!result) {
@@ -421,6 +467,12 @@ public class playComputerDesign extends BorderPane {
                 if (flag) {
                     if ("".equals(btn4.getText())) {
                         btn4.setText(selectedXOPlayer);
+                        try {
+                            fw.write("player btn4 " + selectedXOPlayer);
+                            fw.write(System.getProperty("line.separator"));
+                        } catch (IOException ex) {
+                            Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
+                        }
                         playUser();
                         availableLocations.remove(btn4);
                         if (!result) {
@@ -436,6 +488,12 @@ public class playComputerDesign extends BorderPane {
                 if (flag) {
                     if ("".equals(btn5.getText())) {
                         btn5.setText(selectedXOPlayer);
+                        try {
+                            fw.write("player btn5 " + selectedXOPlayer);
+                            fw.write(System.getProperty("line.separator"));
+                        } catch (IOException ex) {
+                            Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
+                        }
                         playUser();
                         availableLocations.remove(btn5);
                         if (!result) {
@@ -451,6 +509,12 @@ public class playComputerDesign extends BorderPane {
                 if (flag) {
                     if ("".equals(btn6.getText())) {
                         btn6.setText(selectedXOPlayer);
+                        try {
+                            fw.write("player btn6 " + selectedXOPlayer);
+                            fw.write(System.getProperty("line.separator"));
+                        } catch (IOException ex) {
+                            Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
+                        }
                         playUser();
                         availableLocations.remove(btn6);
                         if (!result) {
@@ -466,6 +530,12 @@ public class playComputerDesign extends BorderPane {
                 if (flag) {
                     if ("".equals(btn7.getText())) {
                         btn7.setText(selectedXOPlayer);
+                        try {
+                            fw.write("player btn7 " + selectedXOPlayer);
+                            fw.write(System.getProperty("line.separator"));
+                        } catch (IOException ex) {
+                            Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
+                        }
                         playUser();
                         availableLocations.remove(btn7);
                         if (!result) {
@@ -481,6 +551,12 @@ public class playComputerDesign extends BorderPane {
                 if (flag) {
                     if ("".equals(btn8.getText())) {
                         btn8.setText(selectedXOPlayer);
+                        try {
+                            fw.write("player btn8 " + selectedXOPlayer);
+                            fw.write(System.getProperty("line.separator"));
+                        } catch (IOException ex) {
+                            Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
+                        }
                         playUser();
                         availableLocations.remove(btn8);
                         if (!result) {
@@ -496,6 +572,12 @@ public class playComputerDesign extends BorderPane {
                 if (flag) {
                     if ("".equals(btn9.getText())) {
                         btn9.setText(selectedXOPlayer);
+                        try {
+                            fw.write("player btn9 " + selectedXOPlayer);
+                            fw.write(System.getProperty("line.separator"));
+                        } catch (IOException ex) {
+                            Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
+                        }
                         playUser();
                         availableLocations.remove(btn9);
                         if (!result) {
@@ -505,6 +587,16 @@ public class playComputerDesign extends BorderPane {
                 }
             }
         });
+//        FILE
+        if (player.match.equals("match1")) {
+            try {
+                f = new File("test.txt");
+                fw = new FileWriter(f);
+
+            } catch (IOException ex) {
+                Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
 
     }
 
@@ -566,19 +658,19 @@ public class playComputerDesign extends BorderPane {
             result = checkSuccess(success1);
             if (result) {
                 userScore++;
-                Task<Void> sleeper = new Task<Void>() {
-                    @Override
-                    protected Void call() throws Exception {
-                        try {
-                            Thread.sleep(5000);
-                        } catch (InterruptedException e) {
-                        }
-                        return null;
-                    }
-                };
-                sleeper.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
-                    @Override
-                    public void handle(WorkerStateEvent event) {
+//                Task<Void> sleeper = new Task<Void>() {
+//                    @Override
+//                    protected Void call() throws Exception {
+//                        try {
+//                            Thread.sleep(5000);
+//                        } catch (InterruptedException e) {
+//                        }
+//                        return null;
+//                    }
+//                };
+//                sleeper.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
+//                    @Override
+//                    public void handle(WorkerStateEvent event) {
                         /* //id_playerScoreSecond.setText("" + );
                         Scene scene = new Scene(new Group(), 540, 540);
 
@@ -613,11 +705,30 @@ public class playComputerDesign extends BorderPane {
                             }
                         }
                         );*/
+                        String path = "src//resources//AhmedHelmy.mp4";
+                        Media media = new Media(new File(path).toURI().toString());
+                        MediaPlayer mediaPlayer = new MediaPlayer(media);
+                        MediaView mediaView = new MediaView(mediaPlayer);
+                        mediaPlayer.setAutoPlay(true);
+                        Label winning = new Label("Congratulations");
+                        winning.setAlignment(Pos.CENTER);
+                        VBox content = new VBox(10, winning, mediaView);
+                        content.setAlignment(Pos.CENTER);
+                        Dialog d = new Dialog();
+                        d.setResizable(true);
+                        d.getDialogPane().getButtonTypes().addAll(ButtonType.CANCEL);
+                        d.getDialogPane().setContent(content);
+                        d.getDialogPane().setMinHeight(430);
+                        d.getDialogPane().setMinWidth(430);
+
+                        d.setOnShowing(e -> mediaPlayer.play());
+                        d.setOnCloseRequest(e -> mediaPlayer.stop());
+                        d.show();
 
                         resetBoard();
-                    }
-                });
-                new Thread(sleeper).start();
+//                    }
+//                });
+//                new Thread(sleeper).start();
 //                mediaView.getMediaPlayer().getOnEndOfMedia().run();
             }
         }
@@ -627,6 +738,12 @@ public class playComputerDesign extends BorderPane {
         if (!availableLocations.isEmpty()) {
             index = (int) Math.round(Math.random() * (availableLocations.size() - 1));
             availableLocations.get(index).setText(selectedXOComputer);
+            try {
+                fw.write("computer " + availableLocations.get(index).getId() + " " + selectedXOComputer);
+                fw.write(System.getProperty("line.separator"));
+            } catch (IOException ex) {
+                Logger.getLogger(playComputerDesign.class.getName()).log(Level.SEVERE, null, ex);
+            }
             availableLocations.remove(index);
             computer++;
             if (computer >= 3) {
