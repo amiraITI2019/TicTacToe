@@ -5,10 +5,12 @@
  */
 package gameserver;
 
+import Database.Database;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.Socket;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
@@ -55,6 +57,8 @@ public class ServicesManager extends Thread {
                                 token4 = st.nextToken();
                                 register(token1, token2, token3, token4);
                                 break;
+                            case "online":
+                                onlineFriends();
                             case "play":
                                 play(token1, token2);
                                 break;
@@ -91,7 +95,9 @@ public class ServicesManager extends Thread {
 
     }
 
-    public static ArrayList<Player> onlineFriends() {
+    public static ArrayList<Player> onlineFriends() throws SQLException {
+        Database db=new Database();
+        db.onlineFriends();
 
         return new ArrayList<Player>();
     }

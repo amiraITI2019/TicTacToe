@@ -1,6 +1,5 @@
 package tictactoe;
 
-import Database.DatabaseOff;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -370,12 +369,8 @@ public class playComputerDesign extends BorderPane {
             iterator.next().setStyle("-fx-background-color: gray;");
 
         }
-        try {
-            DatabaseOff db = new DatabaseOff();
-            db.addPlayer(player);
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
+//        DatabaseOff db = new DatabaseOff();
+//        db.addPlayer(player);
 
         id_back.setOnAction((Action) -> {
             userScore = 0;

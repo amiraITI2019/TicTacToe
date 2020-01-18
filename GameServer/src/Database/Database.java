@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gameserver;
+package Database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -76,6 +76,7 @@ public class Database {
                         if(rs.next())
                         {
                             System.out.println("Login Done");
+//                            update to 1->online
                         }
                         else
                         {
@@ -85,6 +86,10 @@ public class Database {
                     } catch (SQLException ex) {
                         Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
                     }
+            }
+            public void onlineFriends()
+            {
+            
             }
     
 }
