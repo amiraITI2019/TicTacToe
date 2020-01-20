@@ -5,10 +5,13 @@
  */
 package tictactoe;
 
+import java.io.File;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.media.AudioClip;
 import javafx.stage.Stage;
 
 /**
@@ -21,11 +24,18 @@ public class TicTacToe extends Application {
     public void start(Stage stage) throws Exception {
 
         Parent root = new xo_homeBase(stage);
-//       Parent root=new recordsBase(stage);
         Scene scene = new Scene(root);
         stage.setResizable(false);
         stage.setScene(scene);
+        stage.setTitle("XOGame");
+        stage.getIcons().add(new Image(new File("E:\\Java_13\\project\\mergedProject\\TicTacToe\\icon3.jpg").toURI().toString()));
         stage.show();
+        AudioClip gameMusic = new AudioClip(new File("E:\\Java_13\\project\\mergedProject\\TicTacToe\\shidelhezam.mp3").toURI().toString());
+        gameMusic.setVolume(12.0);
+        while (!gameMusic.isPlaying()) {
+            gameMusic.play();
+        }
+
     }
 
     /**

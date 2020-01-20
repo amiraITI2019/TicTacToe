@@ -52,8 +52,6 @@ public class MatchView extends BorderPane {
     protected final InnerShadow innerShadow;
     protected Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9;
     Thread th;
-    public final static Object obj = new Object();
-
     FileReader fr;
     BufferedReader br;
     char[] buffer;

@@ -19,7 +19,7 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="537.0" prefWidth="598.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" height="573.0" layoutX="14.0" layoutY="-101.0" stroke="BLACK" strokeType="INSIDE" width="463.0" />
-                  <Button fx:id="id_single" layoutX="178.0" layoutY="166.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="135.0" text="single player" textFill="#1e1f1f">
+                  <Button fx:id="id_single" layoutX="178.0" layoutY="152.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="135.0" text="single player" textFill="#1e1f1f">
                      <font>
                         <Font name="System Italic" size="19.0" />
                      </font>
@@ -52,7 +52,7 @@
                         <DropShadow color="#08a1fc" height="83.02" radius="29.15" spread="0.18" width="35.58" />
                      </effect>
                   </Label>
-                  <Button fx:id="id_multi" layoutX="178.0" layoutY="228.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="135.0" text="multi player" textFill="#1e1f1f">
+                  <Button fx:id="id_multi" layoutX="178.0" layoutY="214.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="135.0" text="multi player" textFill="#1e1f1f">
                      <font>
                         <Font name="System Italic" size="19.0" />
                      </font>
@@ -67,7 +67,7 @@
                         </Lighting>
                      </effect>
                   </Button>
-                  <Button fx:id="id_playOnline" layoutX="178.0" layoutY="290.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="135.0" text="play online" textFill="#1e1f1f">
+                  <Button fx:id="id_playOnline" layoutX="178.0" layoutY="275.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="135.0" text="play online" textFill="#1e1f1f">
                      <font>
                         <Font name="System Italic" size="19.0" />
                      </font>
@@ -82,7 +82,22 @@
                         </Lighting>
                      </effect>
                   </Button>
-                  <Button fx:id="id_about" layoutX="178.0" layoutY="349.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="135.0" text="about" textFill="#1e1f1f">
+                  <Button fx:id="id_about" layoutX="178.0" layoutY="393.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="135.0" text="about" textFill="#1e1f1f">
+                     <font>
+                        <Font name="System Italic" size="19.0" />
+                     </font>
+                     <effect>
+                        <Lighting diffuseConstant="1.71" specularConstant="2.0" specularExponent="40.0" surfaceScale="0.0">
+                           <bumpInput>
+                              <DropShadow color="#153956" height="247.71" radius="121.5325" spread="0.58" width="240.42" />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant azimuth="360.0" color="#077ce3" elevation="42.21" />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Button>
+                  <Button fx:id="matches" layoutX="178.0" layoutY="334.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="135.0" text="Matches" textFill="#1e1f1f">
                      <font>
                         <Font name="System Italic" size="19.0" />
                      </font>

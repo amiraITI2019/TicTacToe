@@ -59,9 +59,11 @@ public class logInBase extends BorderPane {
     protected final DropShadow dropShadow1;
     protected final Label error;
     protected final AnchorPane anchorPane0;
+    protected Stage stage;
 
-    public logInBase(Stage stage) {
+    public logInBase(Stage s) {
 
+        stage = s;
         innerShadow = new InnerShadow();
         splitPane = new SplitPane();
         anchorPane = new AnchorPane();
@@ -289,5 +291,10 @@ public class logInBase extends BorderPane {
         PrintStream output = new PrintStream(player.getOutputStream());
         output.println("login,amira,11111");
 //        send "login,username,password" to server
+        Parent root = null;
+        root = new playOnline(player,input,output);
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+
     }
 }

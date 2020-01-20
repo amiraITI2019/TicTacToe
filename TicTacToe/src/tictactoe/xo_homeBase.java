@@ -30,6 +30,8 @@ public class xo_homeBase extends BorderPane {
     protected final Button id_playOnline;
     protected final Lighting lighting1;
     protected final Button id_about;
+    protected final Button matches;
+
     protected final Lighting lighting2;
     protected final AnchorPane anchorPane0;
     protected final InnerShadow innerShadow;
@@ -50,6 +52,7 @@ public class xo_homeBase extends BorderPane {
         id_playOnline = new Button();
         lighting1 = new Lighting();
         id_about = new Button();
+        matches = new Button();
         lighting2 = new Lighting();
         anchorPane0 = new AnchorPane();
         innerShadow = new InnerShadow();
@@ -82,11 +85,11 @@ public class xo_homeBase extends BorderPane {
         rectangle.setWidth(463.0);
 
         id_single.setLayoutX(178.0);
-        id_single.setLayoutY(166.0);
+        id_single.setLayoutY(152.0);
         id_single.setMnemonicParsing(false);
         id_single.setPrefHeight(42.0);
         id_single.setPrefWidth(135.0);
-        id_single.setText("single player");
+        id_single.setText("Single Player");
         id_single.setTextFill(javafx.scene.paint.Color.valueOf("#1e1f1f"));
         id_single.setFont(new Font("System Italic", 19.0));
 
@@ -126,11 +129,11 @@ public class xo_homeBase extends BorderPane {
         label1.setEffect(dropShadow);
 
         id_multi.setLayoutX(178.0);
-        id_multi.setLayoutY(228.0);
+        id_multi.setLayoutY(214.0);
         id_multi.setMnemonicParsing(false);
         id_multi.setPrefHeight(42.0);
         id_multi.setPrefWidth(135.0);
-        id_multi.setText("multi player");
+        id_multi.setText("Multi Player");
         id_multi.setTextFill(javafx.scene.paint.Color.valueOf("#1e1f1f"));
         id_multi.setFont(new Font("System Italic", 19.0));
 
@@ -141,11 +144,11 @@ public class xo_homeBase extends BorderPane {
         id_multi.setEffect(lighting0);
 
         id_playOnline.setLayoutX(178.0);
-        id_playOnline.setLayoutY(290.0);
+        id_playOnline.setLayoutY(275.0);
         id_playOnline.setMnemonicParsing(false);
         id_playOnline.setPrefHeight(42.0);
         id_playOnline.setPrefWidth(135.0);
-        id_playOnline.setText("play online");
+        id_playOnline.setText("Online");
         id_playOnline.setTextFill(javafx.scene.paint.Color.valueOf("#1e1f1f"));
         id_playOnline.setFont(new Font("System Italic", 19.0));
 
@@ -156,11 +159,11 @@ public class xo_homeBase extends BorderPane {
         id_playOnline.setEffect(lighting1);
 
         id_about.setLayoutX(178.0);
-        id_about.setLayoutY(349.0);
+        id_about.setLayoutY(393.0);
         id_about.setMnemonicParsing(false);
         id_about.setPrefHeight(42.0);
         id_about.setPrefWidth(135.0);
-        id_about.setText("about");
+        id_about.setText("About");
         id_about.setTextFill(javafx.scene.paint.Color.valueOf("#1e1f1f"));
         id_about.setFont(new Font("System Italic", 19.0));
 
@@ -169,6 +172,15 @@ public class xo_homeBase extends BorderPane {
         lighting2.setSpecularExponent(40.0);
         lighting2.setSurfaceScale(0.0);
         id_about.setEffect(lighting2);
+
+        matches.setLayoutX(178.0);
+        matches.setLayoutY(334.0);
+        matches.setMnemonicParsing(false);
+        matches.setPrefHeight(42.0);
+        matches.setPrefWidth(135.0);
+        matches.setText("Matches");
+        matches.setTextFill(javafx.scene.paint.Color.valueOf("#1e1f1f"));
+        matches.setFont(new Font("System Italic", 19.0));
 
         anchorPane0.setMinHeight(0.0);
         anchorPane0.setMinWidth(0.0);
@@ -191,6 +203,7 @@ public class xo_homeBase extends BorderPane {
         anchorPane.getChildren().add(id_multi);
         anchorPane.getChildren().add(id_playOnline);
         anchorPane.getChildren().add(id_about);
+        anchorPane.getChildren().add(matches);
         splitPane.getItems().add(anchorPane);
         splitPane.getItems().add(anchorPane0);
 
@@ -220,6 +233,11 @@ public class xo_homeBase extends BorderPane {
         });
         id_playOnline.setOnAction((Action) -> {
             Parent root = new loginOrRegBase(s);
+            Scene scene = new Scene(root);
+            s.setScene(scene);
+        });
+        matches.setOnAction((Action) -> {
+            Parent root = new recordsBase(s);
             Scene scene = new Scene(root);
             s.setScene(scene);
         });

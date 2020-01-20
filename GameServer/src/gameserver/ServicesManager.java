@@ -13,6 +13,7 @@ import java.net.Socket;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,12 +26,15 @@ public class ServicesManager extends Thread {
     DataInputStream input;
     PrintStream output;
     Socket player;
+    static Vector<ServicesManager> clientsVector =new Vector<ServicesManager>();
 
     public ServicesManager(Socket p) throws IOException {
         player = p;
         input = new DataInputStream(player.getInputStream());
         output = new PrintStream(player.getOutputStream());
         start();
+            clientsVector.add(this);
+
     }
 
     @Override
@@ -59,6 +63,7 @@ public class ServicesManager extends Thread {
                                 break;
                             case "online":
                                 onlineFriends();
+                                break;
                             case "play":
                                 play(token1, token2);
                                 break;
@@ -71,6 +76,8 @@ public class ServicesManager extends Thread {
                     }
                 } catch (IOException ex) {
                     System.out.println("else");
+                } catch (SQLException ex) {
+                    Logger.getLogger(ServicesManager.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
@@ -85,8 +92,8 @@ public class ServicesManager extends Thread {
 
     }
 
-    private void play(String token1, String token2) {
-        System.out.println("play successful");
+    private void play(String place, String game) {
+       sendMessageToAll(place+","+game);
 
     }
 
@@ -101,5 +108,13 @@ public class ServicesManager extends Thread {
 
         return new ArrayList<Player>();
     }
-
+  void sendMessageToAll(String msg)
+    {
+        System.out.println("length of vector is : "+clientsVector.size());
+        for(ServicesManager ch : clientsVector)
+        {
+          System.out.println("server "+msg);
+          ch.output.println(msg);
+        }
+    }
 }
